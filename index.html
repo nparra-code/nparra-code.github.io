@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nelson F. Parra G. - Resume</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #1241a6; /* blue */
+      --light-bg: #f3f4f6;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background: var(--light-bg);
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    header {
+      text-align: center;
+      margin: 1.5rem 1rem;
+    }
+    header h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+      color: var(--primary);
+    }
+    header p {
+      color: #555;
+      font-size: 1rem;
+    }
+    .top-bar {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      align-items: center;
+      text-align: center;
+      width: 95%;
+      max-width: 800px;
+      margin-top: 1rem;
+    }
+    .social {
+      display: flex;
+      gap: 0.75rem;
+    }
+    .social a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      border: 1px solid #ccc;
+      color: #333;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      font-size: 1rem;
+    }
+    .social a:hover {
+      background: var(--primary);
+      color: white;
+      border-color: var(--primary);
+    }
+    .language-select select {
+      padding: 0.3rem 0.6rem;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 0.9rem;
+      background-color: transparent;
+    }
+    .contact-line {
+      font-size: 0.9rem;
+      color: #333;
+      margin-top: 0.5rem;
+    }
+    .contact-line a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .contact-line a:hover {
+      text-decoration: underline;
+    }
+    .card {
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 1.5rem;
+      max-width: 800px;
+      width: 95%;
+      margin-bottom: 1.5rem;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.8s ease;
+    }
+    .card.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    h2 {
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+      color: #222;
+    }
+    section {
+      margin-bottom: 1.25rem;
+      transition: opacity 0.5s ease;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    ul li {
+      margin-bottom: 0.5rem;
+      line-height: 1.5;
+    }
+    .skills {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.5rem;
+    }
+    .skills span {
+      background: #f9fafb;
+      padding: 0.4rem 0.8rem;
+      border-radius: 8px;
+      border: 1px solid #e5e7eb;
+      font-size: 0.9rem;
+      transition: all 0.3s ease;
+    }
+    .skills span:hover {
+      background: var(--primary);
+      color: white;
+      border-color: var(--primary);
+    }
+    @media (min-width: 600px) {
+      header h1 {
+        font-size: 2.5rem;
+      }
+      header p {
+        font-size: 1.1rem;
+      }
+      .skills {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (min-width: 900px) {
+      .skills {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  </style>
+  <script>
+    function changeLanguage(lang) {
+      document.querySelectorAll('[data-lang]').forEach(el => {
+        el.style.display = el.getAttribute('data-lang') === lang ? 'block' : 'none';
+        el.style.opacity = 0;
+        setTimeout(() => { el.style.opacity = 1; }, 50);
+      });
+    }
+    // Scroll animation for cards
+    window.addEventListener('scroll', () => {
+      document.querySelectorAll('.card').forEach(card => {
+        const rect = card.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 50) {
+          card.classList.add('visible');
+        }
+      });
+    });
+  </script>
+</head>
+<body onload="changeLanguage('en')">
+
+  <div class="top-bar">
+    <div class="social">
+      <a href="https://github.com/nparra-code" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://linkedin.com/in/nelsonfparrag" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://twitter.com/nparrafg" target="_blank"><i class="fab fa-twitter"></i></a>
+    </div>
+    <div class="language-select">
+      <select onchange="changeLanguage(this.value)">
+        <option value="en">English</option>
+        <option value="es">Español</option>
+      </select>
+    </div>
+  </div>
+
+  <header>
+    <h1>Nelson F. Parra G.</h1>
+    <p>Electronic Engineer | Instrumentation & Control | Data Analysis</p>
+  </header>
+
+  <div class="card">
+    <section data-lang="en">
+      <h2>About Me</h2>
+      <p>
+        Electronic Engineering student at Universidad de Antioquia with experience in
+        robotics, database management, and embedded systems. IEEE member, PMI member and passionate
+        about control systems, automation, and data-driven solutions, particularly in the oil & gas industry.
+      </p>
+    </section>
+    <section data-lang="es">
+      <h2>Sobre Mí</h2>
+      <p>
+        Estudiante de Ingeniería Electrónica en la Universidad de Antioquia con experiencia en
+        robótica, gestión de bases de datos y sistemas embebidos. Miembro IEEE, miembro PMI y apasionado
+        por los sistemas de control, la automatización y las soluciones basadas en datos, en particular en la industria de petróleo y gas.
+      </p>
+    </section>
+
+    <section data-lang="en">
+      <h2>Education</h2>
+      <ul>
+        <li><strong>B.Sc. Electronic Engineering (ongoing, 10th semester)</strong> – Universidad de Antioquia, Medellín</li>
+        <li><strong>High School Diploma</strong> – Instituto Educacional Juan XXIII, Venezuela</li>
+      </ul>
+    </section>
+    <section data-lang="es">
+      <h2>Educación</h2>
+      <ul>
+        <li><strong>Pregrado en Ingeniería Electrónica (en curso, 10° semestre)</strong> – Universidad de Antioquia, Medellín</li>
+        <li><strong>Bachillerato</strong> – Instituto Educacional Juan XXIII, Venezuela</li>
+      </ul>
+    </section>
+
+    <section data-lang="en">
+      <h2>Experience</h2>
+      <ul>
+        <li><strong>Research Member</strong> – Mobile Robotics (RoboCup) Group, Universidad de Antioquia.<br> Focus on robotics, automation, and AI applications.</li>
+        <li><strong>Assistant Programmer</strong> – Electronics & Telecommunications Department, Universidad de Antioquia.<br> Developed centralized systems for data analysis and organizational management.</li>
+        <li><strong>IEEE Student Branch</strong> – Vicepresident, ComSoc Chapter. Leadership and technical projects.</li>
+      </ul>
+    </section>
+    <section data-lang="es">
+      <h2>Experiencia</h2>
+      <ul>
+        <li><strong>Investigador</strong> – Grupo de Robótica Móvil (RoboCup), Universidad de Antioquia.<br> Enfoque en robótica, automatización y aplicaciones de IA.</li>
+        <li><strong>Programador Asistente</strong> – Departamento de Electrónica y Telecomunicaciones, Universidad de Antioquia.<br> Desarrollo de sistemas centralizados para análisis de datos y gestión organizacional.</li>
+        <li><strong>Rama Estudiantil IEEE</strong> – Vicepresidente del Capítulo ComSoc. Liderazgo y proyectos técnicos.</li>
+      </ul>
+    </section>
+
+    <section data-lang="en">
+      <h2>Skills</h2>
+      <div class="skills">
+        <span>Embedded Systems (ESP32, ARM)</span>
+        <span>Database Management (PostgreSQL, Supabase)</span>
+        <span>Python (Data Analysis, GUI, ML)</span>
+        <span>Control & Instrumentation Systems</span>
+        <span>Robotics & Automation</span>
+        <span>Project Management & Leadership</span>
+      </div>
+    </section>
+    <section data-lang="es">
+      <h2>Habilidades</h2>
+      <div class="skills">
+        <span>Sistemas Embebidos (ESP32, ARM)</span>
+        <span>Gestión de Bases de Datos (PostgreSQL, Supabase)</span>
+        <span>Python (Análisis de Datos, GUI, ML)</span>
+        <span>Sistemas de Control e Instrumentación</span>
+        <span>Robótica y Automatización</span>
+        <span>Gestión de Proyectos y Liderazgo</span>
+      </div>
+    </section>
+
+    <section data-lang="en">
+      <h2>Languages</h2>
+      <ul>
+        <li>Spanish – Native</li>
+        <li>English – Advanced</li>
+        <li>German – Intermediate</li>
+      </ul>
+    </section>
+    <section data-lang="es">
+      <h2>Idiomas</h2>
+      <ul>
+        <li>Español – Nativo</li>
+        <li>Inglés – Avanzado</li>
+        <li>Alemán – Intermedio</li>
+      </ul>
+    </section>
+
+    <section data-lang="en">
+      <h2>Certifications</h2>
+      <ul>
+        <li>Learning SCADA – LinkedIn Learning</li>
+        <li>Learning Industrial Automation – LinkedIn Learning</li>
+        <li>Learning PLC Ladder Logic – LinkedIn Learning</li>
+        <li>Fundamentals of Deep Learning – NVIDIA</li>
+        <li>Android App Development – Platzi</li>
+      </ul>
+    </section>
+    <section data-lang="es">
+      <h2>Certificaciones</h2>
+      <ul>
+        <li>Aprendiendo SCADA – LinkedIn Learning</li>
+        <li>Aprendiendo Automatización Industrial – LinkedIn Learning</li>
+        <li>Aprendiendo PLC Ladder Logic – LinkedIn Learning</li>
+        <li>Fundamentos de Deep Learning – NVIDIA</li>
+        <li>Desarrollo de Apps Android – Platzi</li>
+      </ul>
+    </section>
+
+    <div class="contact-line">
+      Want to know more? Reach me at <a href="https://linkedin.com/in/nelsonfparrag" target="_blank">LinkedIn</a> or Email: 
+      <a href="mailto:nelsonparra.jobs@gmail.com">nelsonparra.jobs@gmail.com</a>
+    </div>
+
+  </div>
+</body>
+</html>

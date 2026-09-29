@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { GraduationCap, Calendar, CheckCircle } from "lucide-react";
+import { GraduationCap, Calendar, CheckCircle, Award } from "lucide-react";
 import { CVData } from "@/data/cvData";
 
 interface EducationSectionProps {
@@ -7,7 +7,7 @@ interface EducationSectionProps {
   lang: "en" | "es";
 }
 
-export const EducationSection = ({ data }: EducationSectionProps) => {
+export const EducationSection = ({ data, lang }: EducationSectionProps) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -49,6 +49,33 @@ export const EducationSection = ({ data }: EducationSectionProps) => {
           </div>
         </motion.div>
       ))}
+
+      {data.certifications.length > 0 && (
+        <div className="pt-4">
+          <div className="flex items-center gap-3 mb-4">
+            <div className="p-3 bg-primary/10 rounded-lg">
+              <Award className="w-6 h-6 text-primary" />
+            </div>
+            <h2 className="text-2xl font-mono font-semibold text-foreground">
+              {lang === "en" ? "Certifications" : "Certificaciones"}
+            </h2>
+          </div>
+          <div className="grid gap-4 md:grid-cols-2">
+            {data.certifications.map((cert, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.2 + index * 0.1, duration: 0.4 }}
+                className="bg-card border border-border rounded-lg p-5 card-hover"
+              >
+                <h3 className="font-mono font-semibold text-foreground mb-1">{cert.name}</h3>
+                <p className="text-muted-foreground text-sm">{cert.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      )}
     </motion.div>
   );
 };

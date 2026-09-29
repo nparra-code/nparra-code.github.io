@@ -6,6 +6,7 @@ export interface CVData {
     emails: string[];
     linkedin: string;
     github: string;
+    headline: string;
     summary: string;
   };
   education: {
@@ -40,6 +41,10 @@ export interface CVData {
     name: string;
     description: string;
   }[];
+  certifications: {
+    name: string;
+    description: string;
+  }[];
 }
 
 export const cvDataEN: CVData = {
@@ -47,10 +52,11 @@ export const cvDataEN: CVData = {
     name: "Nelson Fernando Parra Guardia",
     location: "Sabaneta, Antioquia, Colombia",
     phone: "+57 318 8554017",
-    emails: ["nelsonparra.jobs@gmail.com", "nelson.parra@udea.edu.co"],
+    emails: ["nelsonparra.jobs@gmail.com", "npguardia@h-mv.com"],
     linkedin: "https://linkedin.com/in/nelsonfparrag/",
     github: "https://github.com/nparra-code",
-    summary: "Deep interest in embedded systems development, test automation and the integration of digital electronics for real-time applications. Exploring industrial instrumentation and automation systems, including the architecture and deployment of SCADA, HMI, and industrial process control solutions. Actively learning and applying concepts in AI development (e.g., computer vision, reinforcement learning, and recurrent neural networks) and building intelligent autonomous systems. High experience with Linux OS, particularly Ubuntu distribution."
+    headline: "Electronics Engineer | Automation Engineer @ HMV Ingenieros | Founder @ Energeia Labs | Embedded Systems & Applied AI",
+    summary: "Electronics Engineer working in substation automation at HMV Ingenieros and founder of Energeia Labs, a technology company delivering embedded systems, AI, renewable energy and technical consulting solutions. Background in embedded firmware, mobile robotics and control, with a thesis on PID autotuning using recurrent neural networks. Designs and ships production AI systems: LLM pipelines for classification and structured data extraction, retrieval-augmented generation (RAG), tool integration through the Model Context Protocol (MCP) and orchestration of AI agents to build software at high pace and precision. Actively studying project and business management to scale engineering teams."
   },
   education: [
     {
@@ -58,9 +64,9 @@ export const cvDataEN: CVData = {
       institution: "Universidad de Antioquia",
       period: "February 2020 - March 2026",
       details: [
-        "164/175 approved credits. Accumulate grade: 4.06/5.",
-        "Thesis (in progress): PID Autotuning for wheel speed applied in mobile robotics using ANN.",
-        "Researcher, and Department's programming assistant."
+        "Graduated March 2026. Cumulative GPA: 4.06/5.",
+        "Thesis: PID constant estimation using recurrent neural networks, applied to wheel velocity control in mobile robotics.",
+        "Researcher (RoboSync Project) and Department's programming assistant."
       ]
     },
     {
@@ -76,10 +82,33 @@ export const cvDataEN: CVData = {
   ],
   experience: [
     {
+      title: "Automation Engineer",
+      company: "HMV Ingenieros",
+      location: "Medellin, Colombia",
+      period: "April 2026 - Present",
+      description: "Basic engineering for substation automation projects, defining how protection, control and communication systems are architected and specified.",
+      achievements: [
+        "Develop substation automation system architectures and design criteria.",
+        "Produce technical specifications, signal lists, equipment lists and material requisitions for substation projects."
+      ]
+    },
+    {
+      title: "Founder",
+      company: "Energeia Labs",
+      location: "Remote (Medellin, Colombia)",
+      period: "August 2026 - Present",
+      description: "Technology company serving the Venezuelan engineering market across four verticals: embedded systems, artificial intelligence, renewable energy and technical consulting.",
+      achievements: [
+        "Designed and deployed an LLM-powered WhatsApp automation system for a real estate franchise that classifies and extracts structured data from ~800 listings per day, building an inventory of ~2,000 properties at ~USD 1/day in AI cost (Node.js, PostgreSQL, Evolution API, OpenAI).",
+        "Built and launched the company website (energeialabs.tech) with Next.js 15, Supabase and Resend: lead capture, transactional email and versioned public policies.",
+        "Lead business development, pricing, contracting and project management, applying PMI practices to run the company."
+      ]
+    },
+    {
       title: "Assistant Programmer",
       company: "Electronics Department",
       location: "Medellin, Colombia",
-      period: "October 2024 - Present",
+      period: "October 2024 - February 2026",
       description: "Assisted in optimizing the course management for the Electronics and Telecommunications Department, focusing on expanding the work throughout the whole Faculty.",
       achievements: [
         "Engineered a centralized management system via a Python desktop application, successfully coordinating course scheduling and improving data integrity using robust SQL data modeling.",
@@ -91,7 +120,7 @@ export const cvDataEN: CVData = {
       title: "Researcher",
       company: "RoboSync Project",
       location: "Medellin, Colombia",
-      period: "January 2024 - Present",
+      period: "January 2024 - February 2026",
       description: "Works in robotics with special focus on RoboCup Small-Size League tournament: autonomous robots soccer tournament. Collaborated with cross-functional teams at Mälardalens University in Sweden and the Technological University of Panama.",
       achievements: [
         "Participated in the formation of a new research group and secured project funding through the successful proposal and presentation to faculty.",
@@ -111,13 +140,21 @@ export const cvDataEN: CVData = {
       name: "Project Management Institute - PMI",
       role: "Member",
       period: "August 2025 - Present",
-      description: "Translated insights from the VIII International PMI Congress (Medellin) into practical methodologies, identifying and adopting Project Management strategies to enhance problem-solving within ongoing projects. Planning to pursue CAPM certification."
+      description: "Translated insights from the VIII International PMI Congress (Medellin) into practical methodologies for ongoing projects. Continuous study of project management (predictive and agile, aligned with the CAPM content outline) and business management, applied to running Energeia Labs."
     }
   ],
   skills: [
     {
       category: "Programming Languages",
-      items: ["C/C++", "Python", "VHDL", "LaTeX", "AWL", "Ladder Logic"]
+      items: ["C/C++", "Python", "TypeScript/JavaScript", "Kotlin", "VHDL", "LaTeX", "AWL", "Ladder Logic"]
+    },
+    {
+      category: "Artificial Intelligence",
+      items: ["LLM pipelines (classification & structured extraction)", "RAG (embeddings, vector stores, pgvector)", "Model Context Protocol (MCP)", "AI agent orchestration", "OpenAI & Gemini APIs", "Context & token management", "Recurrent neural networks", "Computer vision", "Reinforcement learning"]
+    },
+    {
+      category: "Web & Backend",
+      items: ["React", "Next.js", "Node.js", "Supabase", "Docker", "Vercel"]
     },
     {
       category: "Tools & Platforms",
@@ -135,9 +172,21 @@ export const cvDataEN: CVData = {
   languages: [
     { language: "Spanish", level: "Native" },
     { language: "English", level: "C1 - IELTS (Fully professional proficiency)" },
-    { language: "German", level: "Intermediate (B2 studies in progress)" }
+    { language: "German", level: "Intermediate (B2 course completed)" }
   ],
   projects: [
+    {
+      name: "Real Estate WhatsApp Bot (Energeia Labs)",
+      description: "Production system that reads a franchise's WhatsApp agent groups, uses an LLM to classify posts and extract structured property data (price, location, features), deduplicates listings in PostgreSQL and answers property search requests automatically."
+    },
+    {
+      name: "SSD Generator",
+      description: "Personal initiative to make engineering document generation more efficient at work: a client-side web tool for substation documentation. Its tabulation format module exports .xlsx files with cover, presentation sheet and 8 preloaded equipment types, matching the client's reference model."
+    },
+    {
+      name: "Energeia Labs Website",
+      description: "Company website built with Next.js 15, Tailwind and a 3D hero (React Three Fiber), with a validated contact form that stores leads in Supabase and sends transactional emails via Resend."
+    },
     {
       name: "Course Manager",
       description: "Centralized application made for the Electronics and Telecommunications Departments at Universidad de Antioquia to streamline the management of course classrooms and schedules for department chiefs and administrators."
@@ -153,7 +202,9 @@ export const cvDataEN: CVData = {
     {
       name: "ROS2 Workshop",
       description: "25-hour dedicated ROS2 workshop deepening understanding of the ROS framework, making concepts like nodes, topics, messages, services, and actions more practical. Led by Mälardalen University with the support of Universidad de Antioquia."
-    },
+    }
+  ],
+  certifications: [
     {
       name: "Fundamentals of Deep Learning",
       description: "Established a robust foundation in core deep learning concepts essential for designing and building effective AI infrastructure."
@@ -166,10 +217,11 @@ export const cvDataES: CVData = {
     name: "Nelson Fernando Parra Guardia",
     location: "Sabaneta, Antioquia, Colombia",
     phone: "+57 318 8554017",
-    emails: ["nelsonparra.jobs@gmail.com", "nelson.parra@udea.edu.co"],
+    emails: ["nelsonparra.jobs@gmail.com", "npguardia@h-mv.com"],
     linkedin: "https://linkedin.com/in/nelsonfparrag/",
     github: "https://github.com/nparra-code",
-    summary: "Profundo interés en el desarrollo de sistemas embebidos, automatización de pruebas e integración de electrónica digital para aplicaciones en tiempo real. Explorando sistemas de instrumentación y automatización industrial, incluyendo la arquitectura e implementación de soluciones SCADA, HMI y control de procesos industriales. Aprendiendo y aplicando activamente conceptos en desarrollo de IA (visión por computador, aprendizaje por refuerzo y redes neuronales recurrentes) y construcción de sistemas autónomos inteligentes. Alta experiencia con Linux OS, particularmente la distribución Ubuntu."
+    headline: "Ingeniero Electrónico | Ingeniero de Automatización @ HMV Ingenieros | Fundador @ Energeia Labs | Sistemas Embebidos e IA Aplicada",
+    summary: "Ingeniero Electrónico dedicado a la automatización de subestaciones en HMV Ingenieros y fundador de Energeia Labs, empresa de tecnología que ofrece soluciones en sistemas embebidos, IA, energía renovable y consultoría técnica. Formación en firmware embebido, robótica móvil y control, con tesis en autosintonización PID mediante redes neuronales recurrentes. Diseño y llevo a producción sistemas de IA: pipelines con LLM para clasificación y extracción de datos estructurados, generación aumentada por recuperación (RAG), integración de herramientas mediante Model Context Protocol (MCP) y orquestación de agentes de IA para construir software con rapidez y precisión. Estudio activamente gerencia de proyectos y de empresas para escalar equipos de ingeniería."
   },
   education: [
     {
@@ -177,9 +229,9 @@ export const cvDataES: CVData = {
       institution: "Universidad de Antioquia",
       period: "Febrero 2020 - Marzo 2026",
       details: [
-        "164/175 créditos aprobados. Promedio acumulado: 4.06/5.",
-        "Tesis (en progreso): Autosintonización PID para velocidad de ruedas aplicada en robótica móvil usando ANN.",
-        "Investigador y asistente de programación del Departamento."
+        "Graduado en marzo de 2026. Promedio acumulado: 4.06/5.",
+        "Tesis: estimación de constantes PID mediante redes neuronales recurrentes, aplicada al control de velocidad de ruedas en robótica móvil.",
+        "Investigador (Proyecto RoboSync) y asistente de programación del Departamento."
       ]
     },
     {
@@ -195,10 +247,33 @@ export const cvDataES: CVData = {
   ],
   experience: [
     {
+      title: "Ingeniero de Automatización",
+      company: "HMV Ingenieros",
+      location: "Medellín, Colombia",
+      period: "Abril 2026 - Presente",
+      description: "Ingeniería básica para proyectos de automatización de subestaciones, definiendo la arquitectura y especificación de los sistemas de protección, control y comunicaciones.",
+      achievements: [
+        "Desarrollo arquitecturas de sistemas de automatización de subestaciones y criterios de diseño.",
+        "Elaboro especificaciones técnicas, listas de señales, listas de equipos y requisiciones de material para proyectos de subestaciones."
+      ]
+    },
+    {
+      title: "Fundador",
+      company: "Energeia Labs",
+      location: "Remoto (Medellín, Colombia)",
+      period: "Agosto 2026 - Presente",
+      description: "Empresa de tecnología para el mercado de ingeniería venezolano con cuatro verticales: sistemas embebidos, inteligencia artificial, energía renovable y consultoría técnica.",
+      achievements: [
+        "Diseñé y desplegué un sistema de automatización de WhatsApp con LLM para una franquicia inmobiliaria que clasifica y extrae datos estructurados de ~800 publicaciones diarias, construyendo un inventario de ~2.000 inmuebles con un costo de IA de ~USD 1/día (Node.js, PostgreSQL, Evolution API, OpenAI).",
+        "Construí y lancé el sitio de la empresa (energeialabs.tech) con Next.js 15, Supabase y Resend: captación de leads, correo transaccional y políticas públicas versionadas.",
+        "Lidero desarrollo de negocio, cotización, contratación y gestión de proyectos, aplicando prácticas del PMI a la operación de la empresa."
+      ]
+    },
+    {
       title: "Programador Asistente",
       company: "Departamento de Electrónica",
       location: "Medellín, Colombia",
-      period: "Octubre 2024 - Presente",
+      period: "Octubre 2024 - Febrero 2026",
       description: "Asistí en la optimización de la gestión de cursos para el Departamento de Electrónica y Telecomunicaciones, enfocándome en expandir el trabajo a toda la Facultad.",
       achievements: [
         "Desarrollé un sistema de gestión centralizado mediante una aplicación de escritorio en Python, coordinando exitosamente la programación de cursos y mejorando la integridad de datos usando modelado SQL robusto.",
@@ -210,7 +285,7 @@ export const cvDataES: CVData = {
       title: "Investigador",
       company: "Proyecto RoboSync",
       location: "Medellín, Colombia",
-      period: "Enero 2024 - Presente",
+      period: "Enero 2024 - Febrero 2026",
       description: "Trabajo en robótica con enfoque especial en el torneo RoboCup Small-Size League: torneo de fútbol con robots autónomos. Colaboración con equipos multifuncionales en la Universidad de Mälardalen en Suecia y la Universidad Tecnológica de Panamá.",
       achievements: [
         "Participé en la formación de un nuevo grupo de investigación y aseguré financiamiento del proyecto mediante la propuesta y presentación exitosa ante la facultad.",
@@ -230,13 +305,21 @@ export const cvDataES: CVData = {
       name: "Project Management Institute - PMI",
       role: "Miembro",
       period: "Agosto 2025 - Presente",
-      description: "Traduje insights del VIII Congreso Internacional PMI (Medellín) en metodologías prácticas, identificando y adoptando estrategias de Gestión de Proyectos para mejorar la resolución de problemas en proyectos en curso. Planeando obtener certificación CAPM."
+      description: "Traduje aprendizajes del VIII Congreso Internacional PMI (Medellín) en metodologías prácticas para proyectos en curso. Estudio continuo de gerencia de proyectos (predictiva y ágil, alineada al contenido del CAPM) y de gerencia de empresas, aplicado a la operación de Energeia Labs."
     }
   ],
   skills: [
     {
       category: "Lenguajes de Programación",
-      items: ["C/C++", "Python", "VHDL", "LaTeX", "AWL", "Ladder Logic"]
+      items: ["C/C++", "Python", "TypeScript/JavaScript", "Kotlin", "VHDL", "LaTeX", "AWL", "Ladder Logic"]
+    },
+    {
+      category: "Inteligencia Artificial",
+      items: ["Pipelines con LLM (clasificación y extracción estructurada)", "RAG (embeddings, vector stores, pgvector)", "Model Context Protocol (MCP)", "Orquestación de agentes de IA", "APIs de OpenAI y Gemini", "Gestión de contexto y tokens", "Redes neuronales recurrentes", "Visión por computador", "Aprendizaje por refuerzo"]
+    },
+    {
+      category: "Web y Backend",
+      items: ["React", "Next.js", "Node.js", "Supabase", "Docker", "Vercel"]
     },
     {
       category: "Herramientas y Plataformas",
@@ -254,9 +337,21 @@ export const cvDataES: CVData = {
   languages: [
     { language: "Español", level: "Nativo" },
     { language: "Inglés", level: "C1 - IELTS (Competencia profesional completa)" },
-    { language: "Alemán", level: "Intermedio (Estudios B2 en progreso)" }
+    { language: "Alemán", level: "Intermedio (Curso B2 completado)" }
   ],
   projects: [
+    {
+      name: "Bot Inmobiliario de WhatsApp (Energeia Labs)",
+      description: "Sistema en producción que lee los grupos de WhatsApp de los agentes de una franquicia, usa un LLM para clasificar publicaciones y extraer datos estructurados del inmueble (precio, ubicación, características), deduplica en PostgreSQL y responde automáticamente solicitudes de búsqueda."
+    },
+    {
+      name: "SSD Generator",
+      description: "Iniciativa personal para hacer más eficiente la generación de documentos de ingeniería en la empresa: herramienta web que corre 100% en el navegador para documentación de subestaciones. Su módulo de formato de tabulación exporta .xlsx con portada, hoja de presentación y 8 tipos de equipo precargados, idénticos al modelo del cliente."
+    },
+    {
+      name: "Sitio Web de Energeia Labs",
+      description: "Sitio corporativo construido con Next.js 15, Tailwind y un hero 3D (React Three Fiber), con formulario validado que guarda leads en Supabase y envía correos transaccionales vía Resend."
+    },
     {
       name: "Gestor de Cursos",
       description: "Aplicación centralizada creada para los Departamentos de Electrónica y Telecomunicaciones de la Universidad de Antioquia para optimizar la gestión de aulas y horarios de cursos para jefes y administradores del departamento."
@@ -272,7 +367,9 @@ export const cvDataES: CVData = {
     {
       name: "Taller ROS2",
       description: "Taller dedicado de 25 horas de ROS2 profundizando la comprensión del framework ROS, haciendo más prácticos conceptos como nodos, topics, mensajes, servicios y acciones. Dirigido por la Universidad de Mälardalen con apoyo de la Universidad de Antioquia."
-    },
+    }
+  ],
+  certifications: [
     {
       name: "Fundamentos de Deep Learning",
       description: "Establecí una base sólida en conceptos fundamentales de deep learning esenciales para diseñar y construir infraestructura de IA efectiva."

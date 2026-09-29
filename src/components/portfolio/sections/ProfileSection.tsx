@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { User, Cpu, Bot, Gauge, Terminal } from "lucide-react";
+import { User, Cpu, Bot, Gauge, Rocket } from "lucide-react";
 import { CVData } from "@/data/cvData";
 
 interface ProfileSectionProps {
@@ -10,16 +10,16 @@ interface ProfileSectionProps {
 export const ProfileSection = ({ data, lang }: ProfileSectionProps) => {
   const highlights = lang === "en" 
     ? [
-        { icon: Cpu, title: "Embedded Systems", desc: "Real-time applications & firmware development" },
-        { icon: Bot, title: "Robotics & AI", desc: "RoboCup SSL, computer vision, neural networks" },
-        { icon: Gauge, title: "Industrial Automation", desc: "SCADA, HMI, PLCs, process control" },
-        { icon: Terminal, title: "Linux Expert", desc: "Ubuntu, Debian, Fedora distributions" },
+        { icon: Cpu, title: "Embedded Systems", desc: "Firmware, real-time control & mobile robotics" },
+        { icon: Gauge, title: "Substation Automation", desc: "System architectures, specifications, signal lists" },
+        { icon: Bot, title: "Applied AI", desc: "LLM pipelines, RAG, MCP, AI agent orchestration" },
+        { icon: Rocket, title: "Entrepreneurship", desc: "Founder of Energeia Labs, project & business management" },
       ]
     : [
-        { icon: Cpu, title: "Sistemas Embebidos", desc: "Aplicaciones en tiempo real y desarrollo de firmware" },
-        { icon: Bot, title: "Robótica e IA", desc: "RoboCup SSL, visión por computador, redes neuronales" },
-        { icon: Gauge, title: "Automatización Industrial", desc: "SCADA, HMI, PLCs, control de procesos" },
-        { icon: Terminal, title: "Experto en Linux", desc: "Distribuciones Ubuntu, Debian, Fedora" },
+        { icon: Cpu, title: "Sistemas Embebidos", desc: "Firmware, control en tiempo real y robótica móvil" },
+        { icon: Gauge, title: "Automatización de Subestaciones", desc: "Arquitecturas, especificaciones, listas de señales" },
+        { icon: Bot, title: "IA Aplicada", desc: "Pipelines con LLM, RAG, MCP, orquestación de agentes" },
+        { icon: Rocket, title: "Emprendimiento", desc: "Fundador de Energeia Labs, gerencia de proyectos y empresas" },
       ];
 
   return (

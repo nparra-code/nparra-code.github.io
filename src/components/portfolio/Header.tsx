@@ -23,7 +23,7 @@ export const Header = ({ data, lang }: HeaderProps) => {
           </h1>
           <p className="text-muted-foreground flex items-center gap-2 mt-3">
             <ChartNoAxesGantt className="w-4 h-4 text-primary" />
-            Electronic Engineering Student | Embedded Systems | Industrial Automation | AI Enthusiast
+            {data.profile.headline}
           </p>
         </div>
 

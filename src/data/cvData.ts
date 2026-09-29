@@ -89,7 +89,8 @@ export const cvDataEN: CVData = {
       description: "Basic engineering for substation automation projects, defining how protection, control and communication systems are architected and specified.",
       achievements: [
         "Develop substation automation system architectures and design criteria.",
-        "Produce technical specifications, signal lists, equipment lists and material requisitions for substation projects."
+        "Produce technical specifications, signal lists, equipment lists and material requisitions for substation projects.",
+        "Built SSD Generator on my own initiative, a web tool that generates substation engineering documents (.xlsx tabulation formats matching the client's reference model) to make the team's document production more efficient."
       ]
     },
     {
@@ -100,6 +101,7 @@ export const cvDataEN: CVData = {
       description: "Technology company serving the Venezuelan engineering market across four verticals: embedded systems, artificial intelligence, renewable energy and technical consulting.",
       achievements: [
         "Designed and deployed an LLM-powered WhatsApp automation system for a real estate franchise that classifies and extracts structured data from ~800 listings per day, building an inventory of ~2,000 properties at ~USD 1/day in AI cost (Node.js, PostgreSQL, Evolution API, OpenAI).",
+        "Designed and deployed an LLM-powered Telegram automation system for a wholesale PVC fittings importer and distributor: records sales and inventory movements from voice notes or free text, generates PDF quotes and delivers up-to-date inventory reports, using Google Sheets as the data layer.",
         "Built and launched the company website (energeialabs.tech) with Next.js 15, Supabase and Resend: lead capture, transactional email and versioned public policies.",
         "Lead business development, pricing, contracting and project management, applying PMI practices to run the company."
       ]
@@ -139,7 +141,7 @@ export const cvDataEN: CVData = {
     {
       name: "Project Management Institute - PMI",
       role: "Member",
-      period: "August 2025 - Present",
+      period: "August 2025 - August 2026",
       description: "Translated insights from the VIII International PMI Congress (Medellin) into practical methodologies for ongoing projects. Continuous study of project management (predictive and agile, aligned with the CAPM content outline) and business management, applied to running Energeia Labs."
     }
   ],
@@ -178,6 +180,10 @@ export const cvDataEN: CVData = {
     {
       name: "Real Estate WhatsApp Bot (Energeia Labs)",
       description: "Production system that reads a franchise's WhatsApp agent groups, uses an LLM to classify posts and extract structured property data (price, location, features), deduplicates listings in PostgreSQL and answers property search requests automatically."
+    },
+    {
+      name: "PVC Distributor Telegram Assistant (Energeia Labs)",
+      description: "Production LLM-powered Telegram assistant for a wholesale PVC fittings importer and distributor that turns voice notes and free-text messages into sales and inventory records, generates PDF quotes and reports current stock, replacing a fully manual spreadsheet workflow."
     },
     {
       name: "SSD Generator",
@@ -254,7 +260,8 @@ export const cvDataES: CVData = {
       description: "Ingeniería básica para proyectos de automatización de subestaciones, definiendo la arquitectura y especificación de los sistemas de protección, control y comunicaciones.",
       achievements: [
         "Desarrollo arquitecturas de sistemas de automatización de subestaciones y criterios de diseño.",
-        "Elaboro especificaciones técnicas, listas de señales, listas de equipos y requisiciones de material para proyectos de subestaciones."
+        "Elaboro especificaciones técnicas, listas de señales, listas de equipos y requisiciones de material para proyectos de subestaciones.",
+        "Construí por iniciativa propia SSD Generator, herramienta web que genera documentos de ingeniería de subestaciones (formatos de tabulación .xlsx idénticos al modelo del cliente) para hacer más eficiente la producción documental del equipo."
       ]
     },
     {
@@ -265,6 +272,7 @@ export const cvDataES: CVData = {
       description: "Empresa de tecnología para el mercado de ingeniería venezolano con cuatro verticales: sistemas embebidos, inteligencia artificial, energía renovable y consultoría técnica.",
       achievements: [
         "Diseñé y desplegué un sistema de automatización de WhatsApp con LLM para una franquicia inmobiliaria que clasifica y extrae datos estructurados de ~800 publicaciones diarias, construyendo un inventario de ~2.000 inmuebles con un costo de IA de ~USD 1/día (Node.js, PostgreSQL, Evolution API, OpenAI).",
+        "Diseñé y desplegué un sistema de automatización de Telegram con LLM para un importador y distribuidor mayorista de conexiones de PVC: registra ventas y movimientos de inventario a partir de notas de voz o texto libre, genera cotizaciones en PDF y entrega reportes de inventario actualizados, usando Google Sheets como capa de datos.",
         "Construí y lancé el sitio de la empresa (energeialabs.tech) con Next.js 15, Supabase y Resend: captación de leads, correo transaccional y políticas públicas versionadas.",
         "Lidero desarrollo de negocio, cotización, contratación y gestión de proyectos, aplicando prácticas del PMI a la operación de la empresa."
       ]
@@ -304,7 +312,7 @@ export const cvDataES: CVData = {
     {
       name: "Project Management Institute - PMI",
       role: "Miembro",
-      period: "Agosto 2025 - Presente",
+      period: "Agosto 2025 - Agosto 2026",
       description: "Traduje aprendizajes del VIII Congreso Internacional PMI (Medellín) en metodologías prácticas para proyectos en curso. Estudio continuo de gerencia de proyectos (predictiva y ágil, alineada al contenido del CAPM) y de gerencia de empresas, aplicado a la operación de Energeia Labs."
     }
   ],
@@ -343,6 +351,10 @@ export const cvDataES: CVData = {
     {
       name: "Bot Inmobiliario de WhatsApp (Energeia Labs)",
       description: "Sistema en producción que lee los grupos de WhatsApp de los agentes de una franquicia, usa un LLM para clasificar publicaciones y extraer datos estructurados del inmueble (precio, ubicación, características), deduplica en PostgreSQL y responde automáticamente solicitudes de búsqueda."
+    },
+    {
+      name: "Asistente de Telegram para Distribuidora de PVC (Energeia Labs)",
+      description: "Asistente de Telegram con LLM en producción para un importador y distribuidor mayorista de conexiones de PVC que convierte notas de voz y mensajes de texto en registros de ventas e inventario, genera cotizaciones en PDF y reporta el stock actual, reemplazando un flujo 100% manual en hojas de cálculo."
     },
     {
       name: "SSD Generator",
